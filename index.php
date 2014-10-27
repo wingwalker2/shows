@@ -3,42 +3,32 @@
 <!DOCTYPE httml>
 <html>
 	<head>
-		<title><?php echo $site_title; ?></title>
-
-		<?php include('config/css.php'); ?>
-
-	
-		<!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    	<meta content="text/html; charset=utf-8" http-equiv="content-type">
+		<title>Shows v0.0</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	    <meta content="William H. Whittaker" name="author">
 	</head>
 	<body>
-		<?php include('config/js.php'); ?>
-		<?php include(DIR_TEMPLATE . '/header.php'); ?>
-		<?php include(DIR_TEMPLATE . '/navigation.php'); ?>
-
-		<div class="container">
-#			<h1><?php echo $page['header']; ?></h1>
-			<?php echo $page['body_formated']; ?>
-			
-			<?php if(isset($_GET['debug']) == 1) { ?>
-				<pre>
-					<?php print_r($page); ?>
-				</pre>
-			<?php } ?>
+		<div id="site">
+			<header id="page_header">
+				<h1>Shows</h1>
+			</header>
+			<nav>
+				<ul>
+					<li><a href="#">Home</a></li>
+				</ul>
+			</nav>
+			<div id="page">
+				<section>
+					<article>
+						<p>Article</p>
+					</article>
+				</section>
+				<aside>
+					<p>Aside</p>
+				</aside>
+			</div>
+			<footer>Whittaker Consulting &copy;2014</footer>
 		</div>
-		<?php if(isset($msg)) { ?>
-			<p>
-				<?php echo $msg; ?>
-			</p>
-		<?php } ?>
-		<?php include(DIR_TEMPLATE . '/footer.php'); ?>
-		<div id="console-debug">
-			Test debug window
-		</div>
-		<?php
-			if (window.jQuery) {  
-				echo "<p>jquery loaded.</p>";  
-			}
-		?>
 	</body>
 </html>
